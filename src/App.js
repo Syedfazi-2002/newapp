@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Studentform from './Formvalidation';
+import Counter from './Counter';
+import Todolist from './Todolist';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className='todo'>
+      <Todolist></Todolist>
+      </div>
+
+
+
+    <div className="myexperiment">
+    
+    <Counter start = {10} add={5}></Counter>
+    <Counter start={100} add={20}></Counter>
+    <Counter start={50} add={50}></Counter>
+
     </div>
+    </>
   );
 }
 
