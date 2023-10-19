@@ -1,6 +1,6 @@
 
 var [reviews,setReviews]=React.useState([
-    {
+     {
         id: 1,
         name: 'Pritam Ahire',
         job: 'web developer',
