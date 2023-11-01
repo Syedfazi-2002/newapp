@@ -11,8 +11,7 @@ function Plan(){
             setLoading(false)
           })
         },[])
-       function del(i){
-        
+       function del(i){  
         var temp = [...tours]
         temp.splice(i,1)
         setTours(temp)
@@ -46,7 +45,6 @@ function Plan(){
                 return (
                     <div className="start" style={{backgroundColor:"white",margin:"20px",width:447,borderRadius:"5px"}}>
                         <center>
-                           
                             <img src={place.image} style={{width:447,height:250}} alt="" />  
                             <div className="second-div">
                                
