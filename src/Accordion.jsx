@@ -37,19 +37,30 @@ function Planning(){
               },
         ]
     )
+    React.useEffect(function(){
+      var y=data.map((x)=>{
+          return {...x,status:false}
   
+        })
+        setData([...y])
+   },[])
+       function click(index){
+          var temp = ([...data])
+          temp[index].status=!temp[index].status
+          setData([...temp])
+       }
  return (
     <div  className="first-div">
         <h3 className="head">Qustions And Answers About Login</h3>
          {
-            data.map((a)=>{
+            data.map((a,i)=>{
                 return (
                       <div className="questions">
-                           <h5 className="title">{a.title} <button className="button" id="btn" onClick={()=>setFlag(!flag)}>
-                            { flag? <AiOutlineMinus/>:<AiOutlinePlus/>}
+                           <h5 className="title">{a.title} <button className="button" id="btn" onClick={()=>{click(i)}}>
+                            {a.status? <AiOutlineMinus/>:<AiOutlinePlus/>}
                             </button>
                             </h5>
-                           {flag&& <p className="paragraph">{a.info}</p>}
+                           <p className="paragraph">{a.status?a.info:a.info.slice(0,0)}</p>
                       </div>
                  
                 )
