@@ -9,15 +9,19 @@ function ControlledComponent(){
             Subjects : [] 
         }
     )
+    var [newdata,setNewdata] = React.useState([])
+
+    function generateData(){
+      setNewdata([...newdata,{...formdata}])
+      // alert(JSON.stringify(formdata))     
+  }
     function handlefirstname(e){
      setFormdata({...formdata,firstname:e.target.value})
     }
     function handlelastname(e){
      setFormdata({...formdata,lastname:e.target.value})
     }
-    function generateData(){
-        alert(JSON.stringify(formdata))     
-    }
+   
     function handledob(e){
       setFormdata({...formdata,Dob:e.target.value})
     }
@@ -50,6 +54,23 @@ return (
         <input type="checkbox" value="javascript" onChange={(e)=>{handleCourse(e)}}/> : JAVASCRIPT  <br />
         <input type="checkbox" value="reactjs" onChange={(e)=>{handleCourse(e)}} /> : REACT JS <br />
          <button onClick={()=>{generateData()}}>Add data</button>
+
+         <ul className="ul-data">
+          {
+            newdata.map((value)=>{
+              return (
+                <div className="data-box">
+                  <li> Full name :{value.firstname.toUpperCase()} {value.lastname.toLowerCase()}</li>
+                  <div>
+                    Dob : {value.Dob}                                  
+                  </div>
+                  <div> Gender : {value.gender}   </div>
+                  <div> Courses :{value.Subjects}</div>
+                </div>
+              )
+            })
+          }
+         </ul>
     </div>
 )
 }
