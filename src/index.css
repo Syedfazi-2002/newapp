@@ -1,6 +1,8 @@
 .main-container{
+  width: 50%;
 display: flex;
 flex-wrap: wrap;
+justify-content: space-between;
 }
 .small-container{
   border: 1px solid black;
@@ -10,8 +12,42 @@ flex-wrap: wrap;
   text-align: center;
   font-size: x-small;
   padding: 5px;
+  background-color: lightcoral;
 }
 .side-container{
+  width: 50%;
   display: inline-block;
   border: 1px solid black;
+  margin-top: 10px;
+}
+.pic{
+  background-color: lightslategray;
+  color: blueviolet;
+}
+.container{
+  display: flex;
+}
+.cart-container{
+  border: 1px solid black;
+  height: auto;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+.cart-pic{
+  width: 50px;
+}
+.button1{
+  border-radius: 40%;
+  margin: 3px;
+}
+.button2{
+  border-radius: 40%;
+  margin: 3px;
+}
+.add-button{
+background-color: lightskyblue;
+}
+.add-button:hover{
+  background-color: coral;
 }
