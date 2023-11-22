@@ -1,0 +1,9 @@
+.data-field{
+  border: 1px solid black;
+  width: 500px;
+  justify-content: center;
+  margin-left: 200px;
+}
+.input-field{
+  margin-top: 10px;
+}

@@ -19,7 +19,6 @@ var [contact,setContact] = useState(
 
 
 const handleSubmit = (e) =>{
-    console.log("form is calling");
     e.preventDefault();
 axios.post("http://localhost:4000/contact",contact)
 .then((res)=>{
@@ -30,30 +29,36 @@ axios.post("http://localhost:4000/contact",contact)
 }
 
  return(
-    <div>
-            <form onSubmit={handleSubmit} >
-                <label htmlFor="">
+    <div className="data-field">
+        <center>
+        <h1> Post method using axios</h1>
+        </center>
+           <center>
+           <form onSubmit={handleSubmit} className="form" >
+                <label className="input-field">
                     Full name :   <input type="text" onChange={(event)=>{setContact({...contact,fullname:event.target.value})}}/>
-                </label>
+                </label >
                 <br />
-                <label htmlFor="">
+                <label className="input-field" >
                     Email : <input type="text" onChange={(event)=>{setContact({...contact,email:event.target.value})}} />
                 </label>
                 <br />
-                <label htmlFor="">
+                <label className="input-field" >
                     Mobile Number : <input type="text" onChange={(event)=>{setContact({...contact,mobilenumber:event.target.value})}} />
                 </label>
                 <br />
-                <label htmlFor="">
+                <label className="input-field">
                     Orgname : <input type="text" onChange={(event)=>{setContact({...contact,orgname:event.target.value})}} />
                 </label>
                     <br />
-                <label htmlFor="">
+                <label  className="input-field">
                     message : <input type="textarea" onChange={(event)=>{setContact({...contact,message:event.target.value})}} />
                 </label>
+                <br />
                 <button type="submit">submit</button>
                 
             </form>
+           </center>
     </div>
  )
 }
