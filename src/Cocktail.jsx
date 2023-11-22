@@ -10,7 +10,7 @@ function Drinks(){
            setData(res.data)
         })
     },[])
-    console.log(data)
+    // console.log(data)
     function found(){
       var s = document.getElementById("d4").value
       console.log(s)
@@ -19,11 +19,7 @@ function Drinks(){
           return (a.strCategory.toLowerCase().startsWith(temp))
       })
     }
-    // function load(a){  
-    //     <Detail a = {a}></Detail>
-    //      alert((a))
-    // }
-
+ 
     console.log(data)
    return (
            <div>
@@ -54,10 +50,10 @@ function Drinks(){
                                <h1>{a.strCategory}</h1>
                                <h3>{a.strGlass}</h3>
                                <h6 className="alcoholic">{a.strAlcoholic}</h6>
-                               <button className="button" onClick={<Detail a={JSON.stringify(a)}></Detail>}>
-                                <Link to={`/${a.strCategory}/Details`}> Details</Link>
+                               {/* <button className="button" onClick={<Detail a={JSON.stringify(a)}></Detail>}> */}
+                                {/* <Link to={`/${a.strCategory}/Details`}> Details</Link> */}
                                   
-                                </button>
+                                {/* </button> */}
                                 {/* <Outlet></Outlet> */}
                                </div>
                            

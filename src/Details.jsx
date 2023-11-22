@@ -1,7 +1,7 @@
 import React from "react";
 import { Link,Outlet} from "react-router-dom"; 
 function Detail(prop){
-  console.log("obj details",(prop.a))
+  // console.log("obj details",(prop.a))
   return(
    <div>
        <center>
