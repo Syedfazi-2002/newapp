@@ -29,10 +29,6 @@ body{
 .pic{
   margin-top: 40px;
   padding: 10px;
- 
-}
-.img{
-  border-radius: 10px;
 }
 .first-text-box{
   font-size: 15px;
@@ -41,8 +37,6 @@ body{
   border-right: none;
   outline: none;
   width: 170px;
-  /* width: 300px; */
-  /* margin-top: 20px; */
 }
 .second-text-box{
  
@@ -61,17 +55,7 @@ body{
   outline: none;
   margin-bottom: 10px;
 }
-.button{
-  background-color: red;
-  color: white;
-  width: 200px;
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  /* margin-top: 50px; */
-}
 .second-container{
-  /* width: 400px; */
   padding: 20px;
   background-color: white;
   border-radius: 0px 10px 10px 0px;
@@ -90,15 +74,18 @@ body{
   margin: 10px;
   justify-content: space-between;
 }
-
-.btn{
+ 
+.button{
   display: flex;
   justify-content: end;
-}
+} 
 .text-font{
   font-size: x-small;
   color: grey;
 }
 .fields{
   margin-bottom: 30px;
+}
+.btn{
+  width: 200px;
 }

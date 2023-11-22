@@ -20,7 +20,7 @@ return (
             <i class="bi bi-envelope-fill" style={{color:"#AA336A"}}></i>   <span className="icons">info@happpydonars.net</span>
            </div>
            <div  className="pic">
-            <img className="img" width={150} src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2018/03/Simple-Location-Picker.png?fit=561%2C421&ssl=1" alt="" />
+              <img width={150} src="https://i0.wp.com/www.cssscript.com/wp-content/uploads/2018/03/Simple-Location-Picker.png?fit=561%2C421&ssl=1" class="img-thumbnail" alt="..."/>
            </div>
         </div>
         <div className="second-container">
@@ -31,13 +31,11 @@ return (
                          <p className="text-font">Your Name</p>
                         <input type="text"  className="first-text-box"/>
                     </div>
-
-                      
+                    
                       <div className="fields">
                       <p  className="text-font">Contact Number (optional)</p>
                       <input type="text"  className="second-text-box"/>
                       </div>
-
 
                 </div>
 
@@ -55,15 +53,14 @@ return (
                 </div>
 
             </div>
-            <div className="message">
-                    
-                <p  className="text-font">Message</p>
-                <input type="text" placeholder="What do you want to talk to us about?"  className="message"/>
+
+            <div className="message">         
+                 <p  className="text-font">Message</p>
+                 <input type="text" placeholder="What do you want to talk to us about?"  className="message"/>
             </div>
 
-            <div className="btn">
-                <button className="button" > Send Message </button>
-            
+            <div className="button">              
+                 <button type="button" class="btn btn-danger">Send Message</button>
             </div>
         </div>
         </div>
