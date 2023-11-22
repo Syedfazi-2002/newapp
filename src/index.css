@@ -1,13 +1,104 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.first-container{
+  background-color: black;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+}
+.text{
+  font-size: x-small;
+  color: grey;
+}
+.icons{
+  font-size: x-small;
+  color: grey;
+  margin-left: 10px;
+}
+.phone{
+  margin-top: 40px;
+  font-size: x-small;
+}
+.email{
+  margin-top: 20px;
+  font-size: x-small;
+}
+.pic{
+  margin-top: 40px;
+  padding: 10px;
+ 
+}
+.img{
+  border-radius: 10px;
+}
+.first-text-box{
+  font-size: 15px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  width: 170px;
+  /* width: 300px; */
+  /* margin-top: 20px; */
+}
+.second-text-box{
+ 
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  width: 170px;
+  /* margin-top: 20px; */
+}
+.message{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 400px;
+  outline: none;
+  margin-bottom: 10px;
+}
+.button{
+  background-color: red;
+  color: white;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  /* margin-top: 50px; */
+}
+.second-container{
+  /* width: 400px; */
+  padding: 20px;
+  background-color: white;
+  border-radius: 0px 10px 10px 0px;
+}
+.main-container{
+  display: flex;
+}
+.data{
+  display: flex;
+  box-shadow: 2px 2px 5px lightslategray;
+  border-radius: 10px;
+  margin: auto;
+}
+.data-field{
+  display: flex;
+  margin: 10px;
+  justify-content: space-between;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn{
+  display: flex;
+  justify-content: end;
+}
+.text-font{
+  font-size: x-small;
+  color: grey;
+}
+.fields{
+  margin-bottom: 30px;
 }
