@@ -1,4 +1,4 @@
-
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 .nav{
     text-align: center;
   }
@@ -13,9 +13,7 @@
    text-align: center;
   
   }
-  body{
-    background-color: deepskyblue;
-  }
+
   .flags li{
     width: 320px;
     margin: 10px;
