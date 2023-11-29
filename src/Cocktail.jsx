@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import axios from "axios";
-import Detail from "./Details";
-import { Link,Outlet } from "react-router-dom";
+import { Link} from "react-router-dom";
+import { Outlet } from "react-router-dom";
 function Drinks(){
     var [data,setData]= useState([])
     React.useEffect(()=>{
@@ -10,50 +10,31 @@ function Drinks(){
            setData(res.data)
         })
     },[])
-    // console.log(data)
-    function found(){
-      var s = document.getElementById("d4").value
-      console.log(s)
-      var temp = data.drinks?.filter((a)=>{
-        console.log(a)
-          return (a.strCategory.toLowerCase().startsWith(temp))
-      })
-    }
  
     console.log(data)
    return (
            <div>
             <div>
-            <nav class="navbar navbar-expand-lg bg-danger bg-body-danger">
+            <nav class="navbar navbar-expand-lg bg-primary bg-body-danger">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">The cocktail DB</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <Link class="nav-link active" aria-current="page" to= "/">Home</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <Link class="nav-link" to="/About">About</Link>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
     </div>
   </div>
 </nav>
             </div>
            <center>
-           
-           <div className="search">
-                <h6>search for the cocktail</h6>
-                <input type="text"  className="search-box" id="d4" onKeyUp={()=>{found()}}/>
-            </div>
-            <h3>menu</h3>
+
+           <div className="menu">
+           <h3> Cocktail Menu</h3>
+           </div>
            </center>
            
             <div className="head-div">
@@ -69,11 +50,7 @@ function Drinks(){
                                <h1>{a.strCategory}</h1>
                                <h3>{a.strGlass}</h3>
                                <h6 className="alcoholic">{a.strAlcoholic}</h6>
-                               {/* <button className="button" onClick={<Detail a={JSON.stringify(a)}></Detail>}> */}
-                                {/* <Link to={`/${a.strCategory}/Details`}> Details</Link> */}
-                                  
-                                {/* </button> */}
-                                {/* <Outlet></Outlet> */}
+                               <Link to= {`/cocktail/${a.idDrink}`}><button className="but-del">Details</button></Link>
                                </div>
                            
                         </div>
@@ -81,6 +58,7 @@ function Drinks(){
                 })
                }
             </div>
+            <Outlet></Outlet>
            </div>
    )
 }

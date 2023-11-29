@@ -8,20 +8,28 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import About from './About';
 import Detail from './Details';
-
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App></App>,
+    element: <App></App>
   },
   {
-    path:"/:id/Details",
-    element:<Detail></Detail>
+    path : "/About",
+    element :<About></About>
+  },
+  {
+    path : "/cocktail/:idDrink",
+    element : <Detail></Detail>
+  },
+  {
+    path : "/",
+    element : <App></App>
   }
+ 
 ]);
 root.render(
     <RouterProvider router={router} />

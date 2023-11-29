@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   border: 1px solid black;
   width: 250px;
-  margin: 10px;
+  margin: 15px;
   box-shadow: 2px 2px 2px 2px rgb(207, 200, 200);
 }
 .pic{
@@ -45,3 +45,54 @@
 .alcoholic{
   color: grey;
 }
+.but-del{
+  border-radius: 10px;
+  background-color: cadetblue;
+}
+.about{
+  justify-content: center;
+  margin: auto;
+  width: 250px;
+  padding: 40px;
+}
+.pargraph{
+  margin: auto;
+  width: 500px;
+  font-size: medium;
+  color: lightslategrey;
+}
+.new-container{
+  display: flex;
+  
+}
+.data-container{
+  margin: 10px ;
+  padding: 10px;
+}
+.photo{
+   border-radius: 10px;
+}
+.span{
+  background-color: lightblue;
+    font-size: large;
+    padding: 5px;
+}
+.back-but{
+  border-radius: 16px;
+  margin-top: 20px;
+  background-color: darkcyan;
+  color: white;
+}
+.back-but:hover{
+  background-color: cornflowerblue;
+}
+.main-store-container{
+  padding: 20px;
+}
+.menu{
+  margin-top: 20px;
+}
+.search-bar{
+  margin-top: 20px;
+}
+
