@@ -33,6 +33,7 @@ function Shopping(){
       })
       setData([...y])
      },[])
+
     function remove(index){
      var temp = [...data]
      temp.splice(index,1)
@@ -44,8 +45,8 @@ function Shopping(){
      }
     }
     function decrement(index){
-        if(index===0){
-            setNum(0)
+        if(index>1){
+            setNum()
         }
         else{
             setNum(num-1)
@@ -86,7 +87,7 @@ return(
                             <div className="button-up-down">
                                 <i class="bi bi-chevron-compact-up" onClick={()=>{reduce()}}></i>
                                 {num}
-                                <i class="bi bi-chevron-compact-down" onClick={()=>{increment(i)}}></i>
+                                <i class="bi bi-chevron-compact-down" onClick={()=>{increment(a,i)}}></i>
                             </div>   
                         </div>
                     </div>
@@ -97,7 +98,7 @@ return(
 
         <hr/>
         <h4>Total</h4>
-        <h4>total4</h4>
+        
         <button onClick={()=>{clear()}}>Clear Shopping</button>
        </center>
       </div>
