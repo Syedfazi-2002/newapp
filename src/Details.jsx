@@ -4,8 +4,9 @@ import { Link, useParams} from "react-router-dom";
 function Detail(){
    var x = useParams()
    var [data,setData]= useState([])
+   console.log(data.drinks)
    React.useEffect(()=>{
-       axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
+       axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
        .then((res)=>{
           setData(res.data)
        })
@@ -33,7 +34,7 @@ function Detail(){
         </div>
         </center>
        <div>
-        {
+         {
           data.drinks?.map((obj)=>{
               if(x.idDrink === obj.idDrink){
                 return (
@@ -89,7 +90,7 @@ function Detail(){
                 )
               }
           })
-        }
+        } 
          
        </div>
    </div>

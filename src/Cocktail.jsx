@@ -2,15 +2,26 @@ import React,{useState} from "react";
 import axios from "axios";
 import { Link} from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import SearchBar from "./Search";
 function Drinks(){
     var [data,setData]= useState([])
+    var [downdata,setDowndata]= useState([])
+
     React.useEffect(()=>{
-        axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
+        axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
         .then((res)=>{
            setData(res.data)
         })
     },[])
- 
+    // React.useEffect(()=>{
+      
+    //     axios.get("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
+    //     .then((res)=>{
+    //        setDowndata(res.data)
+    //     })
+    // },[])
+      
+//  console.log(downdata)
     console.log(data)
    return (
            <div>
@@ -34,11 +45,15 @@ function Drinks(){
 
            <div className="menu">
            <h3> Cocktail Menu</h3>
+           <SearchBar></SearchBar>
            </div>
+
+           {/* <SearchBar></SearchBar> */}
            </center>
            
             <div className="head-div">
-               {
+
+                {
                 data.drinks?.map((a,i)=>{
                     return (
                         <div className="main-div">
@@ -56,7 +71,7 @@ function Drinks(){
                         </div>
                     )
                 })
-               }
+               } 
             </div>
             <Outlet></Outlet>
            </div>

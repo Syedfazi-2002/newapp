@@ -4,7 +4,7 @@ import Drinks from "./Cocktail"
 function App() {
   return (
     <div className="App">
-      <Drinks></Drinks>
+      {/* <Drinks></Drinks> */}
     </div>
   );
 }
