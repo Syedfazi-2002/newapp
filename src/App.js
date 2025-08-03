@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import LightDark from './Theme';
-
+import LightDark from './ChangingLight2Dark';
 function App() {
   return (
     <div className="App">
