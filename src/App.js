@@ -1,14 +1,17 @@
+import logo from './logo.svg';
 import './App.css';
-import Comp from './controlled';
-import NewProducts from './service/products/Product';
+import Shopping from './ShoppingCart';
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import DynamicArray from './controlled';
 function App() {
   return (
-    <div >
+    <div className="mybox">
+      {/* <Shopping></Shopping> */}
+
+      <DynamicArray></DynamicArray>
       
-      <h1>hii...</h1>
-      <NewProducts></NewProducts>
-      {/* <Comp></Comp> */}
-      <
     </div>
   );
 }
